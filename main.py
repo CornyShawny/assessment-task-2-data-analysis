@@ -10,11 +10,11 @@ all_seasons = all_seasons.sort_values(by=['player_height'])
 print(all_seasons)
 
 all_seasons.plot(
-                 kind='bar', 
+                 kind='line', 
                  x='player_height',
                  y='pts',
                  color='blue',
-                 alpha=1,
+                 alpha=0.3,
                  title= 'Player Height = Points Scored?'
                 )
 plt.show()
