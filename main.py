@@ -16,10 +16,10 @@ def showUpdatedData():
     print(updated_df)
 
 def showAvgHeight():
-    print('Average Height of NBA Players is: ', avg_height, 'cm')
+    print('Average Height of NBA Players:', avg_height, 'cm')
 
 def showAvgPoints():
-    print('Average Points of NBA Players Per Game', avg_points, 'pts')
+    print('Average Points of NBA Players Per Game:', avg_points, 'pts')
 
 def showSortedData():
     print(sorted_df)
