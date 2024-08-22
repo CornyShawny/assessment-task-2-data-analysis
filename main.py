@@ -5,8 +5,13 @@ quit = False
 
 original_df = pd.read_csv('data/all_seasons.csv')
 updated_df = original_df[['player_name', 'player_height', 'pts']]
+
 avg_height = updated_df['player_height'].mean()
+rounded_height = avg_height.round(1)
+
 avg_points = updated_df['pts'].mean()
+rounded_points = avg_points.round(1)
+
 sorted_df = updated_df.sort_values(by=['player_height'])
 
 def showOriginalData():
@@ -16,10 +21,10 @@ def showUpdatedData():
     print(updated_df)
 
 def showAvgHeight():
-    print('Average Height of NBA Players:', avg_height, 'cm')
+    print('Average Height of NBA Players:', rounded_height, 'cm')
 
 def showAvgPoints():
-    print('Average Points of NBA Players Per Game:', avg_points, 'pts')
+    print('Average Points of NBA Players Per Game:', rounded_points, 'pts')
 
 def showSortedData():
     print(sorted_df)
@@ -27,11 +32,11 @@ def showSortedData():
 def showCharts():
     sorted_df.plot(
                  kind='line', 
-                 x='player_height',
-                 y='pts',
-                 color='blue',
-                 alpha=0.3,
-                 title= 'Player Height = Points Scored?'
+                 x='player_height', 
+                 y='pts', 
+                 color='blue', 
+                 alpha=0.3, 
+                 title= 'Player Height vs Points Scored'
                 )
     plt.show()
 
