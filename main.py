@@ -1,19 +1,26 @@
+# modules
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# global variables
 quit = False
 
+# dataframes
 original_df = pd.read_csv('data/all_seasons.csv')
 updated_df = original_df[['player_name', 'player_height', 'pts']]
 
+# average height
 avg_height = updated_df['player_height'].mean()
 rounded_height = avg_height.round(1)
 
+# average points
 avg_points = updated_df['pts'].mean()
 rounded_points = avg_points.round(1)
 
+# sorted heights from shortest to tallest
 sorted_df = updated_df.sort_values(by=['player_height'])
 
+# defined functions
 def showOriginalData():
     print(original_df)
 
@@ -77,5 +84,6 @@ def userOptions():
     except:
         print('Please enter a number!!!')
 
+# main program
 while not quit:
     userOptions()
