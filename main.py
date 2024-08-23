@@ -56,7 +56,7 @@ def userOptions():
           2 - Show the updated Data Frame
           3 - Show the average height of NBA Players
           4 - Show the average points per game of NBA Players
-          5 - Show data ordered from tallest to shortest
+          5 - Show data ordered from shortest to tallest
           6 - Visualise the comparison of height vs performance
           7 - Quit Program
           """)
